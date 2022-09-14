@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f8f8f4;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: baseline;
+}
+
+.nav-logo {
+    width: 20px;
+    height: 20px;
+}
+
+.container a {
+    color: #000000;
+}
+
+.logo-carrito {
+    width: 25px;
+    height: 25px;
+}
