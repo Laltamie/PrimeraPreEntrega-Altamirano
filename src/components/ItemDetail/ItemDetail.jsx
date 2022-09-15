@@ -36,4 +36,3 @@ const ItemDetail = ({ item }) => {
 
 export default ItemDetail;
 
-// src={images(`${ item.img }`)}

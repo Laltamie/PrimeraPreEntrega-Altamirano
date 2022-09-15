@@ -14,12 +14,6 @@ const ItemDetailContainer = () => {
 
 
     useEffect(() => {
-        
-        // const getProduct = () => new Promise ((res, rej) => {
-        //     setTimeout(() => {
-        //         res(productos)
-        //     }, 500)
-        // });
     
         const getProduct = new Promise ((res, rej) => {
             const product = productos.find(prod => prod.id == detalleid)

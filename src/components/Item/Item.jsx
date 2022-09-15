@@ -24,5 +24,3 @@ const Item = ({id, img, name, precio}) => {
 };
 
 export default Item;
-// const images = require.context('../../assets/images', true);
-// src={images(`${ img }`)}
