@@ -3,16 +3,14 @@ import "../ItemDetail/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount";
 
 
-
-const ItemDetail = ({item}) => {
-
+const ItemDetail = ({ item }) => {
     return (
         <>
         <div key={item.id} className="container">
             <ul>
                 <li>
                     <div className="container conten-detalle">
-                    <img src={"/imeges/" + item.img} className="card-img-top card-ItemD" width="150px" alt={item.name} />
+                    <img src={'/images/' + item.img} className="card-img-top card-ItemD" width="150px" alt={item.name} />
                     
                     
                         <div>
@@ -37,3 +35,5 @@ const ItemDetail = ({item}) => {
 };
 
 export default ItemDetail;
+
+// src={images(`${ item.img }`)}

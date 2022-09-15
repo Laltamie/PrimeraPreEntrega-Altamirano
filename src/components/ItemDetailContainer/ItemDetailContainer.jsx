@@ -1,27 +1,40 @@
 import React from "react";
 import { useState,  useEffect } from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
-import { productos } from "../productos"
 import { useParams } from "react-router-dom";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import productos  from '../productos'
 
 
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({});
 
-    const { detalleId } = useParams();
+    const { detalleid } = useParams();
+
+
 
     useEffect(() => {
-
+        
+        // const getProduct = () => new Promise ((res, rej) => {
+        //     setTimeout(() => {
+        //         res(productos)
+        //     }, 500)
+        // });
+    
         const getProduct = new Promise ((res, rej) => {
+            const product = productos.find(prod => prod.id == detalleid)
             setTimeout(() => {
-                res(productos)
-            }, 500)
+                res(product)
+            }, 2000)
         });
 
-        getProduct.then(res => setItem(res.find(prod => prod.id === detalleId)));
+        
+        getProduct.then((info) => {
+            setItem(info)
+        });
 
     }, []);
+   
 
     return (
         <div>
